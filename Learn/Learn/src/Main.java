@@ -1,3 +1,4 @@
+import SheetThree.Rectangle;
 import SheetTwo.Author;
 import SheetTwo.Complex;
 import SheetTwo.Invoice;
@@ -47,5 +48,33 @@ public class Main {
             System.out.println();
         }
 
+        Rectangle []rectangles = new  Rectangle[4];
+        rectangles[0] = new Rectangle(5, 5);
+        int r = 140 , l = 150;
+        for (int i = 1; i < rectangles.length; i++) {
+            rectangles[i] = new Rectangle(r, l);
+            r+=120;
+            l+=120;
+        }
+
+        for (int i = 0; i < rectangles.length; i++) {
+            System.out.println("Rectangle " + i + ":" + rectangles[i].toString());
+        }
+
+        Rectangle a = new Rectangle(5, 10);
+        Rectangle b = new Rectangle(5, 15);
+
+        System.out.println("Rectangle " + "a" + " and " + "b"+ ":");
+        System.out.println();
+
+        System.out.println(a.toString());
+        System.out.println(b.toString());
+
+        a = Rectangle.Swap(b , b=a);
+
+        System.out.println("Rectangle " + "a" + " and " + "b" + ":");
+        System.out.println();
+        System.out.println(a.toString());
+        System.out.println(b.toString());
     }
 }
