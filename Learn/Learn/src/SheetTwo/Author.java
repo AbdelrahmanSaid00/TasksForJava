@@ -1,5 +1,7 @@
 package SheetTwo;
 
+import java.util.Arrays;
+
 public class Author {
     private String name;
     private String email;
@@ -22,27 +24,27 @@ public class Author {
     public static class Book {
         private String ISBN;
         private String name;
-        private Author author;
+        private Author [] authors;
         private String publisher;
         private double price;
 
-        public Book(String ISBN, String name, Author author, String publisher, double price) {
+        public Book(String ISBN, String name, Author [] authors, String publisher, double price) {
             this.ISBN = ISBN;
             this.name = name;
-            this.author = author;
+            this.authors = authors;
             this.publisher = publisher;
             this.price = price;
         }
 
         public void setISBN(String ISBN) { this.ISBN = ISBN; }
         public void setName(String name) { this.name = name; }
-        public void setAuthor(Author author) { this.author = author; }
+        public void setAuthor(Author [] authors) { this.authors = authors; }
         public void setPublisher(String publisher) { this.publisher = publisher; }
         public void setPrice(double price) { this.price = price; }
 
         public String getISBN() { return ISBN; }
         public String getName() { return name; }
-        public Author getAuthor() { return author; }
+        public Author [] getAuthor() { return authors; }
         public String getPublisher() { return publisher; }
         public double getPrice() { return price; }
 
@@ -56,7 +58,7 @@ public class Author {
         @Override
         public String toString() {
             return "Book: " + name + "\nISBN: " + ISBN + "\nPublisher: " + publisher +
-                    "\nPrice: " + price + "\n" + author.toString();
+                    "\nPrice: " + price + "\n" + Arrays.toString(authors);
         }
     }
 }

@@ -24,8 +24,11 @@ public class Main {
         System.out.println("Cashier " + cashier.getName() + " issued " + cashier.getInvoices() + " invoices.");
         System.out.println();
 
-        Author author = new Author("George Orwell", "george@bookmail.com");
-        Author.Book book1 = new Author.Book("12345", "1984", author, "Secker & Warburg", 250);
+        Author a1 = new Author("George Orwell", "george@bookmail.com");
+        Author a2 = new Author("Aldous Huxley", "aldous@bookmail.com");
+        Author [] authors = {a1,a2};
+
+        Author.Book book1 = new Author.Book("12345", "1984", authors, "Secker & Warburg", 250);
         System.out.println(book1);
 
 
