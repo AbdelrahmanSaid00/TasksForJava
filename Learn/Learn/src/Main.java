@@ -25,7 +25,7 @@ public class Main {
         System.out.println();
 
         Author author = new Author("George Orwell", "george@bookmail.com");
-        Book book1 = new Book("12345", "1984", author, "Secker & Warburg", 250);
+        Author.Book book1 = new Author.Book("12345", "1984", author, "Secker & Warburg", 250);
         System.out.println(book1);
 
 
