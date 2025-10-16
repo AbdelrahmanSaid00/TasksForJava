@@ -1,3 +1,4 @@
+import SheetThree.Container;
 import SheetThree.Department;
 import SheetThree.Employee;
 import SheetThree.Rectangle;
@@ -82,58 +83,84 @@ public class Main {
         employees[0] = new Employee("Ali", Department.IT, 8, 400);
         employees[1] = new Employee("Sara", Department.HR, 7, 1200);
         employees[2] = new Employee("Omar", Department.FINANCE, 9, 800);
-        employees[3] = new Employee("Lina", Department.IT, 6, 300);
-        employees[4] = new Employee("Hassan", Department.SALES, 10, 1500);
-        employees[5] = new Employee("Nora", Department.HR, 9, 450);
-        employees[6] = new Employee("Mona", Department.FINANCE, 7, 2000);
-        employees[7] = new Employee("Khaled", Department.SALES, 8, 480);
-        employees[8] = new Employee("Tamer", Department.IT, 10, 100);
-        employees[9] = new Employee("Aya", Department.FINANCE, 6, 0);
+//        employees[3] = new Employee("Lina", Department.IT, 6, 300);
+//        employees[4] = new Employee("Hassan", Department.SALES, 10, 1500);
+//        employees[5] = new Employee("Nora", Department.HR, 9, 450);
+//        employees[6] = new Employee("Mona", Department.FINANCE, 7, 2000);
+//        employees[7] = new Employee("Khaled", Department.SALES, 8, 480);
+//        employees[8] = new Employee("Tamer", Department.IT, 10, 100);
+//        employees[9] = new Employee("Aya", Department.FINANCE, 6, 0);
+//
+//        System.out.println("Employees with salary less than 500:\n");
+//        for (Employee emp : employees) {
+//            if (emp.getSalary() < 1000) {
+//                System.out.println(emp);
+//            }
+//        }
+//
+//        System.out.println("\nEmployees working more than 8 hours per day:\n");
+//        for (Employee emp : employees) {
+//            if (emp.getHoursPerDay() < 8) {
+//                System.out.println(emp);
+//            }
+//        }
+//
+//        Employee[][] Emp = new Employee[4][3];
+//
+//        Emp[0][0] = new Employee("Sara", Department.HR, 7, 1200);
+//        Emp[0][1] = new Employee("Nora", Department.HR, 9, 850);
+//        Emp[0][2] = new Employee("Ahmed", Department.HR, 8, 950);
+//
+//        Emp[1][0] = new Employee("Ali", Department.IT, 8, 400);
+//        Emp[1][1] = new Employee("Tamer", Department.IT, 10, 900);
+//        Emp[1][2] = new Employee("Lina", Department.IT, 6, 1300);
+//
+//        Emp[2][0] = new Employee("Omar", Department.FINANCE, 9, 800);
+//        Emp[2][1] = new Employee("Mona", Department.FINANCE, 7, 2000);
+//        Emp[2][2] = new Employee("Aya", Department.FINANCE, 6, 350);
+//
+//        Emp[3][0] = new Employee("Hassan", Department.SALES, 10, 1500);
+//        Emp[3][1] = new Employee("Khaled", Department.SALES, 8, 480);
+//        Emp[3][2] = new Employee("Yara", Department.SALES, 9, 1000);
+//
+//        Department[] dept = Department.values();
+//
+//        for(int i=0 ; i < 4 ;i++) {
+//            System.out.println( "The Employee of the Department " + dept[i]);
+//            Employee Highemp = Emp[i][0];
+//            for(int j=0 ; j < 3; j++) {
+//                System.out.println( Emp[i][j]);
+//                if (Emp[i][j].getSalary() > Highemp.getSalary()) {
+//                    Highemp = Emp[i][j];
+//                }
+//            }
+//            System.out.println("The Highest Employee is  for the Department " + dept[i] + " is "  + Highemp.toString());
+//        }
 
-        System.out.println("Employees with salary less than 500:\n");
-        for (Employee emp : employees) {
-            if (emp.getSalary() < 1000) {
-                System.out.println(emp);
-            }
-        }
 
-        System.out.println("\nEmployees working more than 8 hours per day:\n");
-        for (Employee emp : employees) {
-            if (emp.getHoursPerDay() < 8) {
-                System.out.println(emp);
-            }
-        }
+        Container<Integer> intContainer = new Container<>(10);
+        Container<String> stringContainer = new Container<>("Sales");
+        Container<Employee> empContainer = new Container<>(employees[0]);
 
-        Employee[][] Emp = new Employee[4][3];
+        System.out.println("Initial containers:");
+        System.out.println(intContainer);
+        System.out.println(stringContainer);
+        System.out.println(empContainer);
 
-        Emp[0][0] = new Employee("Sara", Department.HR, 7, 1200);
-        Emp[0][1] = new Employee("Nora", Department.HR, 9, 850);
-        Emp[0][2] = new Employee("Ahmed", Department.HR, 8, 950);
+        intContainer.setData(25);
+        stringContainer.setData("IT Department");
+        empContainer.setData(employees[1]);
 
-        Emp[1][0] = new Employee("Ali", Department.IT, 8, 400);
-        Emp[1][1] = new Employee("Tamer", Department.IT, 10, 900);
-        Emp[1][2] = new Employee("Lina", Department.IT, 6, 1300);
+        System.out.println("\nAfter updating container data:");
+        System.out.println(intContainer);
+        System.out.println(stringContainer);
+        System.out.println(empContainer);
 
-        Emp[2][0] = new Employee("Omar", Department.FINANCE, 9, 800);
-        Emp[2][1] = new Employee("Mona", Department.FINANCE, 7, 2000);
-        Emp[2][2] = new Employee("Aya", Department.FINANCE, 6, 350);
+        System.out.println("\nDirect access to container data:");
+        System.out.println("Integer container holds: " + intContainer.getData());
+        System.out.println("String container holds: " + stringContainer.getData());
+        System.out.println("Employee container holds: " + empContainer.getData());
 
-        Emp[3][0] = new Employee("Hassan", Department.SALES, 10, 1500);
-        Emp[3][1] = new Employee("Khaled", Department.SALES, 8, 480);
-        Emp[3][2] = new Employee("Yara", Department.SALES, 9, 1000);
 
-        Department[] dept = Department.values();
-
-        for(int i=0 ; i < 4 ;i++) {
-            System.out.println( "The Employee of the Department " + dept[i]);
-            Employee Highemp = Emp[i][0];
-            for(int j=0 ; j < 3; j++) {
-                System.out.println( Emp[i][j]);
-                if (Emp[i][j].getSalary() > Highemp.getSalary()) {
-                    Highemp = Emp[i][j];
-                }
-            }
-            System.out.println("The Highest Employee is  for the Department " + dept[i] + " is "  + Highemp.toString());
-        }
     }
 }
