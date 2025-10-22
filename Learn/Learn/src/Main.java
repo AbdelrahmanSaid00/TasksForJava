@@ -82,10 +82,10 @@ public class Main {
 //        System.out.println();
 //        System.out.println(a.toString());
 //        System.out.println(b.toString());
-        Employee[] employees = new Employee[10];
-        employees[0] = new Employee("Ali", Department.IT, 8, 400);
-        employees[1] = new Employee("Sara", Department.HR, 7, 1200);
-        employees[2] = new Employee("Omar", Department.FINANCE, 9, 800);
+//        Employee[] employees = new Employee[10];
+//        employees[0] = new Employee("Ali", Department.IT, 8, 400);
+//        employees[1] = new Employee("Sara", Department.HR, 7, 1200);
+//        employees[2] = new Employee("Omar", Department.FINANCE, 9, 800);
 //        employees[3] = new Employee("Lina", Department.IT, 6, 300);
 //        employees[4] = new Employee("Hassan", Department.SALES, 10, 1500);
 //        employees[5] = new Employee("Nora", Department.HR, 9, 450);
@@ -164,23 +164,23 @@ public class Main {
 //        System.out.println("String container holds: " + stringContainer.getData());
 //        System.out.println("Employee container holds: " + empContainer.getData());
 
-        double[] deg1 = {90, 85, 95};
-        double[] cgpa1 = {3.5, 3.4, 3.6, 3.7, 3.8};
-
-        double[] deg2 = {70, 60, 80};
-        double[] cgpa2 = {2.5, 1.8, 1.7, 3.0, 3.2};
-
-        double[] deg3 = {88, 90, 92};
-        double[] cgpa3 = {3.0, 3.2, 3.5, 3.4, 3.6};
-
-        Student s1 = new Student("Ali Ahmed", new Date("6" , "10" , "2006"), deg1, cgpa1);
-        Student s2 = new Student("Sara Omar", new Date("5" , "6" , "2005"), deg2, cgpa2);
-        Student s3 = new Student("Mohamed Adel", new Date("21" , "7" , "2003"), deg3, cgpa3);
-
-        Student[] group = {s1, s2, s3};
-
-        StudentTest test = new StudentTest(group);
-        test.findHighDegreeOfTheStudent();
-        test.findProbationStudents();
+//        double[] deg1 = {90, 85, 95};
+//        double[] cgpa1 = {3.5, 3.4, 3.6, 3.7, 3.8};
+//
+//        double[] deg2 = {70, 60, 80};
+//        double[] cgpa2 = {2.5, 1.8, 1.7, 3.0, 3.2};
+//
+//        double[] deg3 = {88, 90, 92};
+//        double[] cgpa3 = {3.0, 3.2, 3.5, 3.4, 3.6};
+//
+//        Student s1 = new Student("Ali Ahmed", new Date("6" , "10" , "2006"), deg1, cgpa1);
+//        Student s2 = new Student("Sara Omar", new Date("5" , "6" , "2005"), deg2, cgpa2);
+//        Student s3 = new Student("Mohamed Adel", new Date("21" , "7" , "2003"), deg3, cgpa3);
+//
+//        Student[] group = {s1, s2, s3};
+//
+//        StudentTest test = new StudentTest(group);
+//        test.findHighDegreeOfTheStudent();
+//        test.findProbationStudents();
     }
 }
