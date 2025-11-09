@@ -1,3 +1,5 @@
+import SheetFive.Point2D;
+import SheetFive.Point3D;
 import SheetFour.Date;
 import SheetFour.Student;
 import SheetFour.StudentTest;
@@ -182,5 +184,23 @@ public class Main {
 //        StudentTest test = new StudentTest(group);
 //        test.findHighDegreeOfTheStudent();
 //        test.findProbationStudents();
+
+        Point2D [] pointts = new Point2D[5];
+        pointts[0] = new Point2D(3,4);
+        pointts[1] = new Point2D(6,8);
+        pointts[2] = new Point3D(2,1 , 2);
+        pointts[3] = new Point3D(7,9 , 11);
+        pointts[4] = new Point3D(0,5 , 9);
+
+        for (Point2D p : pointts) {
+            System.out.println(p.toString());
+        }
+        for(Point2D p : pointts) {
+            System.out.println("\nDistance from " + p.toString() + " to origin: " + p.distance(0,0));
+        }
+        System.out.println("Distance be" +
+                "tween points:" + pointts[0].toString() + " and " + pointts[1].toString() + " is " + pointts[0].distance(pointts[1]));
+        System.out.println("p0 equals p1? " + pointts[0].equals(pointts[1]));
+        System.out.println("p0 equals p4? " + pointts[0].equals(pointts[4]));
     }
 }
