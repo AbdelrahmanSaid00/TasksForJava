@@ -1,6 +1,6 @@
 package SheetSix;
 
-public abstract class GeometricObject {
+public abstract class GeometricObject implements Comparable<GeometricObject>{
     private String color;
     private boolean filled;
 
@@ -30,5 +30,14 @@ public abstract class GeometricObject {
     }
     public abstract double getArea();
     public abstract double getPerimeter();
+    @Override
+    public int compareTo(GeometricObject other) {
+        if (this.getArea() > other.getArea())
+            return 1;
+        else if (this.getArea() < other.getArea())
+            return -1;
+        else
+            return 0;
+    }
 }
 

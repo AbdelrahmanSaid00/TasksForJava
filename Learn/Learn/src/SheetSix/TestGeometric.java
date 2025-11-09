@@ -1,5 +1,7 @@
 package SheetSix;
 
+import static SheetSix.ComparableSorting.sortComparable;
+
 public class TestGeometric {
     public static void main(String[] args) {
         GeometricObject [] geometricObjects = new GeometricObject[3];
@@ -14,5 +16,11 @@ public class TestGeometric {
                 System.out.println("Area less than 20: " + obj.toString());
             }
         }
+        System.out.println("Sorting geometric objects by area...\n");
+        sortComparable(geometricObjects);
+        System.out.println("After sorting by area:");
+        for (GeometricObject obj : geometricObjects) {
+            System.out.println(obj.toString());
+            }
     }
 }
